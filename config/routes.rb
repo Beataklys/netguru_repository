@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'students#create'
+  root 'visitors#index'
 
   resources :students do
     get :subjects
   end
 
   resources :teachers
-  resources :visitors
-  resources :reports, only: :subjects
+  resources :visitors, only: :index
+
+  get '/reports/subjects', to: 'reports#subjects', as: 'report_subjects'
 
 
 
