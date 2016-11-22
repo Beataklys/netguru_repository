@@ -1,5 +1,6 @@
 require 'spec_helper'
 
+
 feature 'User creates student' do
   background do
     sign_in

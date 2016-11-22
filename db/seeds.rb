@@ -1,6 +1,6 @@
 puts "Seeds: start"
 TEACHER_TITLES = %w(Dr. Prof. TA)
-User.create!(email: 'admin@admin.com',password: 'adminadmin')
+User.create!(email: 'beata@beata.pl',password: 'beatabeata')
 
 30.times do
   Teacher.create!(
@@ -9,6 +9,7 @@ User.create!(email: 'admin@admin.com',password: 'adminadmin')
     academic_title: TEACHER_TITLES.sample
   )
 end
+
 
 teachers = Teacher.all
 20.times do

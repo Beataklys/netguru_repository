@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.3'
+ruby '2.3.1'
 
 gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.1.0'
