@@ -4,7 +4,6 @@ class StudentDecorator < BaseDecorator
   end
 
 
-
   def avg_notes(subject_item)
   	notes = subject_item.subject_item_notes.find_all { |sin| sin.student == object }
   	return "0.00" if notes.empty?
