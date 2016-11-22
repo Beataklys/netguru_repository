@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :teachers
   resources :visitors, only: :index
 
-  get '/reports/subjects', to: 'reports#subjects', as: 'report_subjects'
+  get '/reports/subjects', to: 'reports#subjects'
 
 
 

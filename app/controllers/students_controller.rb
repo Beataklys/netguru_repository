@@ -1,6 +1,7 @@
 class StudentsController < ApplicationController
   expose(:student, attributes: :student_params)
-  expose(:student_subject_items) { student.subject_item_notes }
+  expose(:student_subject_items) { student.subject_item}
+  expose(:students)
 
   def create
     if student.save
