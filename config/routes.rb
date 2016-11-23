@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
   resources :visitors, only: :index
 
-  get '/reports/subjects', to: 'reports#subjects'
+  get '/reports/subjects', to: 'reports#subjects' 
 
 
 

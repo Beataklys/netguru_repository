@@ -1,6 +1,6 @@
 = simple_form_for student do |f|
   = f.input :first_name
   = f.input :last_name
-  = f.association :subject_item_notes, label_method: :title, value_method: :id, label: 'Subject Items', as: :check_boxes
+  = f.association :subject_items, label_method: :title, value_method: :id, label: 'Subject Items', as: :check_boxes
   = link_to t('shared.back'), students_path, class: 'btn btn-default'
   = f.button :submit

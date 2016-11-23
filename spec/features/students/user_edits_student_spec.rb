@@ -31,7 +31,7 @@ feature 'User edits student' do
   end
 
   scenario 'by assigning subject item' do
-    visit report_subjects_path
+    visit reports_subjects_path
     expect(page).to have_no_content 'Jan Abacki'
 
     visit students_path
@@ -39,7 +39,7 @@ feature 'User edits student' do
     find("input[type='checkbox']").set(true)
     click_button 'Update Student'
 
-    visit report_subjects_path
+    visit reports_subjects_path
     expect(page).to have_content 'Jan Abacki'
   end
 end

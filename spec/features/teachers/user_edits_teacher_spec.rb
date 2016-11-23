@@ -25,7 +25,7 @@ feature 'User edits teacher spec' do
   end
 
   scenario 'by assigning subject item' do
-    visit report_subjects_path
+    visit reports_subjects_path
     expect(page).to have_no_content 'History of NY (Pies Pluto)'
 
     visit teachers_path
@@ -33,7 +33,7 @@ feature 'User edits teacher spec' do
     find("input[type='checkbox']").set(true)
     click_button 'Update Teacher'
 
-    visit report_subjects_path
+    visit reports_subjects_path
     expect(page).to have_content 'History of NY (Pies Pluto)'
   end
 end
