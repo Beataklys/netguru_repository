@@ -1,7 +1,7 @@
 class StudentsController < ApplicationController
   before_action :authenticate_user!, only: :index
   expose(:student, attributes: :student_params)
-  expose(:student_subject_items) { student.subject_item}
+  expose(:student_subject_items) { student.subject_items}
   expose(:students)
 
   def create
