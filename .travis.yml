@@ -5,6 +5,6 @@ services:
   - postgresql
 before_script:
   - cp config/database.yml.sample config/database.yml
-  - psql -h localhost -c 'create database workshops_test;' -U postgres
+  - psql -c 'create database workshops_test;' -U postgres
 addons:
   postgresql: '9.5.4'
