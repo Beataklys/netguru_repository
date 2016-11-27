@@ -1,10 +1,14 @@
 language: ruby
 rvm:
-  - 2.3.1
+- 2.3.1
 services:
-  - postgresql
+- postgresql
 before_script:
-  - cp config/database.yml.sample config/database.yml
-  - psql -c 'create database workshops_test;' -U postgres
+- cp config/database.yml.sample config/database.yml
+- psql -c 'create database workshops_test;' -U postgres
 addons:
   postgresql: '9.4'
+deploy:
+  provider: heroku
+  api_key:
+    secure: X0usA7QHt04lAcK9TMCpcsor2hIRds+yxGl9/B2QpEKsfajx2stREkF9wecFYSJUm6QKlVJWsKtWsEOOfprM2Q/3rLDTEwKDzj4MPa2IhhoGiqDlvwDweoNLTGG268c+Ih/hrCfw4Qup+acH3bBO1iJJpLq9hK74zdN5CWyibmzhX7ijvqEy5em9F+5S/dI/zqwf1bTcsCdp5oQIEiBO/Xr8ehXiNzsdGK+VaVa6xIIfM+7dq5PtD+m1dTgVVXtJgs4GX+NCC2eL6EXbaw4LJko7mLomAba6hR1Qc+Aj8+Hy2Yxt51MZ4PybiFJs1O2JOAZwH2mKlZhD2VQ3mCgQqsAZao6L70bByNo6bOP56RfRkLegLXDg/ITZ+RbBRcAzAfpLNVoOTskFDRm4jt60t23jtDqBKWevr9z5Ry8bP/CR81JdB9fOW9TFlQDcU826IBx7ahRDbV8BFjCFd73yse/C7HJpwUxWEyk+MWz4B0DWbtf+oXRhtJlgJZbYjuQEPkoPKIjYykc1DF39jg7VLy80yqlYJTlYucU3Qrt+p64wk3hbFoAuloL5viFlAZYTfBmaXzyzn3CvExF02vm2yUr2SQdKY2ku+adPbXRwnNosYfWpxOA0Vjp7Ha7PdISqKbbnyVjq3LZgtZKVKS2r4whGixZSFXh3aCJcEhjMmT0=

@@ -1,28 +1,27 @@
 puts "Seeds: start"
 TEACHER_TITLES = %w(Dr. Prof. TA)
-User.create!(email: 'beata@beata.pl',password: 'beatabeata')
+FIRST_NAMES = %w(Jaria Lla Losia Basia Piola)
+LAST_NAMES = %w(Lowak Mowalski Lost Pos Klos)
+SUBJECTS = %w(Geology Math Chemistry Russian Geography)
+User.create!(email: 'beata@beata3.pl',password: 'beatabeata')
 
-30.times do
-  Teacher.create!(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    academic_title: TEACHER_TITLES.sample
-  )
-end
 
+  Teacher.create!(first_name: "Jan",last_name: "Wilk", academic_title: TEACHER_TITLES.sample)
+  Teacher.create!(first_name: "Wanda",last_name: "Rutkiewicz", academic_title: TEACHER_TITLES.sample)
+  Teacher.create!(first_name: "Jerzy",last_name: "Kukuczka", academic_title: TEACHER_TITLES.sample)
 
 teachers = Teacher.all
-20.times do
+SUBJECTS.each do |subject|
   SubjectItem.create!(
-    title: Faker::Lorem.sentence,
+    title: subject,
     teacher: teachers.sample
   )
 end
 
-40.times do
+25.times do
   Student.create!(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name
+    first_name: FIRST_NAMES.sample,
+    last_name: LAST_NAMES.sample
   )
 end
 
