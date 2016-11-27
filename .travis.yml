@@ -5,4 +5,4 @@ before_script:
   - cp config/database.yml.sample config/database.yml
   - psql -c 'create database workshops_test;' -U postgres
 addons:
-  postgresql: '9.5.4'
+  postgresql: '9.5'
