@@ -1,6 +1,8 @@
 language: ruby
 rvm:
   - 2.3.1
+services:
+  - postgresql
 before_script:
   - cp config/database.yml.sample config/database.yml
   - psql -h localhost -c 'create database workshops_test;' -U postgres
