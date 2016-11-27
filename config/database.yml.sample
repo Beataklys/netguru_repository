@@ -3,8 +3,8 @@ connection: &connection
   encoding: unicode
   host:     localhost
   pool: 5
-  username: workshops
-  password:
+  username: postgres
+  password: ' '
 
 development:
   <<: *connection
