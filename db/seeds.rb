@@ -3,7 +3,7 @@ TEACHER_TITLES = %w(Dr. Prof. TA)
 FIRST_NAMES = %w(Jaria Lla Losia Basia Piola)
 LAST_NAMES = %w(Lowak Mowalski Lost Pos Klos)
 SUBJECTS = %w(Geology Math Chemistry Russian Geography)
-User.create!(email: 'beata@beata3.pl',password: 'beatabeata')
+User.create!(email: 'beata@beata4.pl',password: 'beatabeata')
 
 
   Teacher.create!(first_name: "Jan",last_name: "Wilk", academic_title: TEACHER_TITLES.sample)
